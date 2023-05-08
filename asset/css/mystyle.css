@@ -1,0 +1,36 @@
+.navbar {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+}
+
+.content {
+    padding-top: 30px !important;
+}
+
+.footer {
+    margin-top: 80px !important;
+}
+
+.card {
+    width: 20rem;
+    border: none;
+    background-color: transparent !important;
+}
+
+.tambah {
+    display:block;
+    position:absolute; 
+    right:0;
+    border-radius: 10px;
+    font-size:10x;
+    text-align:center;
+    width:100px; 
+    margin-right:150px;
+    cursor: pointer;
+
+}
+
+.tambah:hover {
+    transition: all 1s ease;
+    border: 2px solid #FD7D24;
+}
