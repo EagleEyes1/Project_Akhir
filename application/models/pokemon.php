@@ -15,9 +15,10 @@ class Pokemon extends CI_Model{
     public function create($id, $filename){
         $data = array(
             'id'=>$id,
-            'name'=>$this->input->pokemon('name', TRUE),
-            'type1'=>$this->input->pokemon('type1', TRUE),
-            'type2'=>$this->input->pokemon('type2', TRUE),
+            'name'=>$this->input->post('name', TRUE),
+            'description'=>$this->input->post('description', TRUE),
+            'type1'=>$this->input->post('type1', TRUE),
+            'type2'=>$this->input->post('type2', TRUE),
             'filename'=>$filename
         );
 

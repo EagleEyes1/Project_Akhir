@@ -105,35 +105,58 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="<?= site_url('welcome/create'); ?>" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="exampleInputName1" class="form-label">Name</label>
+                        <input type="text" name="name" class="form-control" id="exampleInputName1"
+                            aria-describedby="emailHelp">
                         <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Image</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                        <textarea class="form-control" name="description" id="exampleFormControlTextarea1"
+                            rows="3"></textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="formSelect" class="form-label">Element</label>
-                        <select class="form-select" aria-label="Default select example">
+                        <label for="formFile" class="form-label">Image</label>
+                        <input class="form-control" name="image" type="file" id="formFile">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formSelect" class="form-label">Type 1</label>
+                        <select class="form-select" name="type1" aria-label="Default select example">
                             <option disabled selected>Select Pokemon Element</option>
-                            <option style="background-color:#fd7d24" value="1">Fire</option>
-                            <option style="background-color:#9bcc50" value="2">Grass</option>
-                            <option style="background: linear-gradient(to bottom, #3dc7ef 50%, #bdb9b8 50%)" value="3">
+                            <option style="background-color:#fd7d24" value="Fire">Fire</option>
+                            <option style="background-color:#9bcc50" value="Grass">Grass</option>
+                            <option style="background: linear-gradient(to bottom, #3dc7ef 50%, #bdb9b8 50%)"
+                                value="Flying">
                                 Flying</option>
-                            <option style="background-color:#707070" value="4">Dark</option>
-                            <option style="background-color:#b97fc8" value="5">Poison</option>
-                            <option style="background-color:#4592c4" value="6">Water</option>
-                            <option style="background-color:#a4acaf" value="7">Normal</option>
-                            <option style="background-color:#edd435" value="8">Electric</option>
+                            <option style="background-color:#707070" value="Dark">Dark</option>
+                            <option style="background-color:#b97fc8" value="Poison">Poison</option>
+                            <option style="background-color:#4592c4" value="Water">Water</option>
+                            <option style="background-color:#a4acaf" value="Normal">Normal</option>
+                            <option style="background-color:#edd435" value="Electric">Electric</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formSelect" class="form-label">Type 2</label>
+                        <select class="form-select" name="type2" aria-label="Default select example">
+                            <option disabled selected>Select Pokemon Element</option>
+                            <option style="background-color:#fd7d24" value="Fire">Fire</option>
+                            <option style="background-color:#9bcc50" value="Grass">Grass</option>
+                            <option style="background: linear-gradient(to bottom, #3dc7ef 50%, #bdb9b8 50%)"
+                                value="Flying">
+                                Flying</option>
+                            <option style="background-color:#707070" value="Dark">Dark</option>
+                            <option style="background-color:#b97fc8" value="Poison">Poison</option>
+                            <option style="background-color:#4592c4" value="Water">Water</option>
+                            <option style="background-color:#a4acaf" value="Normal">Normal</option>
+                            <option style="background-color:#edd435" value="Electric">Electric</option>
                         </select>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Add Pokemon</button>
+                <button type="submit" data-bs-dismiss="modal" class="btn btn-primary">Add Pokemon</button>
             </div>
         </div>
     </div>

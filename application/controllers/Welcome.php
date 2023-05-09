@@ -48,7 +48,7 @@ class Welcome extends CI_Controller
 			$config['allowed_types'] = 'jpeg|jpg|png';
 			$config['max_size'] = '100000';
 			$config['file_ext_tolower'] = TRUE;
-			$config['filename'] = str_replace('.', '_', $id);
+			$config['file_name'] = str_replace('.', '_', $id);
 
 			$this->load->library('upload', $config);
 
