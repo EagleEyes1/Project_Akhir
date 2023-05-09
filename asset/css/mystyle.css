@@ -34,3 +34,51 @@
     transition: all 1s ease;
     border: 2px solid #FD7D24;
 }
+
+.card-img-top {
+    border: 2px solid #2c65b5 !important;
+}
+
+.card-img-edit {
+    cursor:pointer;
+    position:absolute;
+    border-radius:7px;
+    max-width: 40px;
+    padding:5px;
+    top:4px;
+    right:5px;
+    max-height: 40px;
+}
+
+.card-img-edit:hover{
+    transform: scale(1.1);
+}
+
+.card-img-delete:hover{
+    transform: scale(1.1);
+}
+
+.card-img-delete {
+    cursor:pointer;
+    position:absolute;
+    background-color: #198CDC;
+    border-radius:50%;
+    max-width: 30px;
+    bottom:95px;
+    right:5px;
+    padding: 5px;
+    max-height: 30px;
+    object-fit:cover;
+}
+
+.mid-image {
+    display: flex !important;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.toast {
+    margin-right: 50px;
+    margin-top: 50px;
+}

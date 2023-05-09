@@ -18,13 +18,21 @@
         border-radius:7px; 
         padding:5px;
         max-width: 30px;
-        max-height: 30px;" src="asset/images/plus.png" class="card-img-top" alt="tambah">Add Pokemon
+        max-height: 30px;" src="asset/images/plus.png" class="card-img-plus" alt="tambah">Add Pokemon
     </div>
     <div class="row d-flex justify-content-center text-center mt-3">
         <div class="col-4">
             <div class="card">
-                <img style="background-color:#dfe4e2; border-radius:7px" src="asset/images/001.png" class="card-img-top"
-                    alt="poke">
+                <div>
+                    <div data-bs-toggle="modal" data-bs-target="#exampleModalEdit">
+                        <img src="asset/images/edit3.png" class="card-img-edit" alt="poke">
+                    </div>
+                    <img style="background-color:#dfe4e2; border-radius:7px" src="asset/images/001.png"
+                        class="card-img-top" alt="poke">
+                    <div data-bs-toggle="modal" data-bs-target="#exampleModalDelete" class="mid-image">
+                        <img src="asset/images/delete.png" class="card-img-delete" alt="poke">
+                    </div>
+                </div>
                 <div class="card-body">
                     <h5 class="card-title">Bulbasaur</h5>
                     <div>
@@ -40,8 +48,16 @@
         </div>
         <div class="col-4">
             <div class="card">
-                <img style="background-color:#dfe4e2; border-radius:7px" src="asset/images/005.png" class="card-img-top"
-                    alt="poke">
+                <div>
+                    <div data-bs-toggle="modal" data-bs-target="#exampleModalEdit">
+                        <img src="asset/images/edit3.png" class="card-img-edit" alt="poke">
+                    </div>
+                    <img style="background-color:#dfe4e2; border-radius:7px" src="asset/images/005.png"
+                        class="card-img-top" alt="poke">
+                    <div data-bs-toggle="modal" data-bs-target="#exampleModalDelete" class="mid-image">
+                        <img src="asset/images/delete.png" class="card-img-delete" alt="poke">
+                    </div>
+                </div>
                 <div class="card-body">
                     <h5 class="card-title">Charmeleon</h5>
                     <div>
@@ -54,8 +70,16 @@
         </div>
         <div class="col-4">
             <div class="card">
-                <img style="background-color:#dfe4e2; border-radius:7px" src="asset/images/006.png" class="card-img-top"
-                    alt="poke">
+                <div>
+                    <div data-bs-toggle="modal" data-bs-target="#exampleModalEdit">
+                        <img src="asset/images/edit3.png" class="card-img-edit" alt="poke">
+                    </div>
+                    <img style="background-color:#dfe4e2; border-radius:7px" src="asset/images/006.png"
+                        class="card-img-top" alt="poke">
+                    <div data-bs-toggle="modal" data-bs-target="#exampleModalDelete" class="mid-image">
+                        <img src="asset/images/delete.png" class="card-img-delete" alt="poke">
+                    </div>
+                </div>
                 <div class="card-body">
                     <h5 class="card-title">Charizard</h5>
                     <div>
@@ -94,7 +118,7 @@
                     <div class="mb-3">
                         <label for="formSelect" class="form-label">Element</label>
                         <select class="form-select" aria-label="Default select example">
-                            <option disabled selected>Open this select menu</option>
+                            <option disabled selected>Select Pokemon Element</option>
                             <option style="background-color:#fd7d24" value="1">Fire</option>
                             <option style="background-color:#9bcc50" value="2">Grass</option>
                             <option style="background: linear-gradient(to bottom, #3dc7ef 50%, #bdb9b8 50%)" value="3">
@@ -106,21 +130,96 @@
                             <option style="background-color:#edd435" value="8">Electric</option>
                         </select>
                     </div>
-
-                    <!-- <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div> -->
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Add Pokemon</button>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Modal Edit -->
+<div class="modal fade" id="exampleModalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Your Collection</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Image</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formSelect" class="form-label">Element</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option disabled selected>Select Pokemon Element</option>
+                            <option style="background-color:#fd7d24" value="1">Fire</option>
+                            <option style="background-color:#9bcc50" value="2">Grass</option>
+                            <option style="background: linear-gradient(to bottom, #3dc7ef 50%, #bdb9b8 50%)" value="3">
+                                Flying</option>
+                            <option style="background-color:#707070" value="4">Dark</option>
+                            <option style="background-color:#b97fc8" value="5">Poison</option>
+                            <option style="background-color:#4592c4" value="6">Water</option>
+                            <option style="background-color:#a4acaf" value="7">Normal</option>
+                            <option style="background-color:#edd435" value="8">Electric</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Edit Pokemon</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Delete -->
+<div class="modal fade" id="exampleModalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Are You Sure?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+                <button id="toastbtn" type="button" class="btn btn-primary" data-bs-dismiss="modal">Yes</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Toast -->
+<div class="toast position-fixed top-0 end-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        <img src="asset/images/checklist.png" style="
+        max-width: 30px;
+        max-height: 30px" class="rounded me-2" alt="checklist">
+        <strong class="me-auto">Yeay</strong>
+        <small>11 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+        Pokemon Already Deleted!!!
+    </div>
+</div>
+
+<script>
+document.getElementById("toastbtn").onclick = function() {
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+    var toastList = toastElList.map(function(toastEl) {
+        return new bootstrap.Toast(toastEl)
+    })
+    toastList.forEach(toast => toast.show())
+}
+</script>
